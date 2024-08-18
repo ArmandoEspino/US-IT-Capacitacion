@@ -1,0 +1,15 @@
+C:\Users\Darkm\Desktop\DotNEt\BancoCDIS\bin\Debug\net7.0\BankCDIS.exe
+C:\Users\Darkm\Desktop\DotNEt\BancoCDIS\bin\Debug\net7.0\BankCDIS.deps.json
+C:\Users\Darkm\Desktop\DotNEt\BancoCDIS\bin\Debug\net7.0\BankCDIS.runtimeconfig.json
+C:\Users\Darkm\Desktop\DotNEt\BancoCDIS\bin\Debug\net7.0\BankCDIS.dll
+C:\Users\Darkm\Desktop\DotNEt\BancoCDIS\bin\Debug\net7.0\BankCDIS.pdb
+C:\Users\Darkm\Desktop\DotNEt\BancoCDIS\obj\Debug\net7.0\BankCDIS.csproj.AssemblyReference.cache
+C:\Users\Darkm\Desktop\DotNEt\BancoCDIS\obj\Debug\net7.0\BankCDIS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Darkm\Desktop\DotNEt\BancoCDIS\obj\Debug\net7.0\BankCDIS.AssemblyInfoInputs.cache
+C:\Users\Darkm\Desktop\DotNEt\BancoCDIS\obj\Debug\net7.0\BankCDIS.AssemblyInfo.cs
+C:\Users\Darkm\Desktop\DotNEt\BancoCDIS\obj\Debug\net7.0\BankCDIS.csproj.CoreCompileInputs.cache
+C:\Users\Darkm\Desktop\DotNEt\BancoCDIS\obj\Debug\net7.0\BankCDIS.dll
+C:\Users\Darkm\Desktop\DotNEt\BancoCDIS\obj\Debug\net7.0\refint\BankCDIS.dll
+C:\Users\Darkm\Desktop\DotNEt\BancoCDIS\obj\Debug\net7.0\BankCDIS.pdb
+C:\Users\Darkm\Desktop\DotNEt\BancoCDIS\obj\Debug\net7.0\BankCDIS.genruntimeconfig.cache
+C:\Users\Darkm\Desktop\DotNEt\BancoCDIS\obj\Debug\net7.0\ref\BankCDIS.dll
