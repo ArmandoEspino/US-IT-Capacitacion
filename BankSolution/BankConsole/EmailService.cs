@@ -19,7 +19,7 @@ public static class EmailService{
 
         using (var client = new SmtpClient ()) {
             client.Connect("smtp.gmail.com", 587, false);
-            client.Authenticate("eliza.lunaee@gmail.com", "**** **** **** ****");   // PassWord Oculto
+            client.Authenticate("eliza.lunaee@gmail.com", "mxbs lcfn eonn wqiz");   // PassWord Oculto
             client.Send(message);
             client.Disconnect(true);
         }

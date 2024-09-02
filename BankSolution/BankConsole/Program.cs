@@ -161,6 +161,7 @@ void DeleteUser(){
         ShowMenu();
     }else{
         Console.WriteLine("ID no valido");
+        Thread.Sleep(2000);
     }
     }while(true);
 }

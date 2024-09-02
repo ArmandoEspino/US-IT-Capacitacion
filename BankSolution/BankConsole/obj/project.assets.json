@@ -322,11 +322,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Darkm\\Desktop\\DotNEt\\BankSolution\\BankConsole\\BankConsole.csproj",
+      "projectUniqueName": "C:\\Users\\Darkm\\Desktop\\ProyectosS2024\\US-IT-Capacitacion\\BankSolution\\BankConsole\\BankConsole.csproj",
       "projectName": "BankConsole",
-      "projectPath": "C:\\Users\\Darkm\\Desktop\\DotNEt\\BankSolution\\BankConsole\\BankConsole.csproj",
+      "projectPath": "C:\\Users\\Darkm\\Desktop\\ProyectosS2024\\US-IT-Capacitacion\\BankSolution\\BankConsole\\BankConsole.csproj",
       "packagesPath": "C:\\Users\\Darkm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Darkm\\Desktop\\DotNEt\\BankSolution\\BankConsole\\obj\\",
+      "outputPath": "C:\\Users\\Darkm\\Desktop\\ProyectosS2024\\US-IT-Capacitacion\\BankSolution\\BankConsole\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Darkm\\AppData\\Roaming\\NuGet\\NuGet.Config",
