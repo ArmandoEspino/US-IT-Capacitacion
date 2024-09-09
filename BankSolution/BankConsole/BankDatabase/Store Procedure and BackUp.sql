@@ -14,7 +14,7 @@ AS
 GO
 */
 
--- EXEC SelectClient @ClientID = 1
+-- EXEC SelectClient 
 
 
 --  Modifica el procedimiento almacenado InsertClient...
@@ -37,7 +37,7 @@ AS
 GO
 */
 
--- EXEC InsertClient @Name = 'Ale', @PhoneNumber = '12345678', @Email = 'pedro@gmail.com';
+-- EXEC InsertClient @Name = 'Jesus', @PhoneNumber = '12345678', @Email = 'pedro@gmail.com';
 
 -- SELECT * FROM Client
 
@@ -80,12 +80,13 @@ GO
 
 -- GO
 
-EXEC InsertBankTransaction @AccountID = 1, @TransactionType = 2, @Amount = 7000;
+-- EXEC InsertBankTransaction @AccountID = 1, @TransactionType = 2, @Amount = 7000;
 
 
-SELECT * FROM Account
-SELECT * FROM TransactionType
-SELECT * FROM BankTransaction
+-- SELECT cl.ID, cl.Name, acc.Balance FROM Account acc
+-- INNER JOIN Client cl ON cl.ID = acc.ID
+-- SELECT * FROM TransactionType
+-- SELECT * FROM BankTransaction
 
 --  Genera un full backup de la base de datos Bank...
 

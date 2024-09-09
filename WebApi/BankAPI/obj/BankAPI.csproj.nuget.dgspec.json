@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Darkm\\Desktop\\ProyectosS2024\\US-IT-Capacitacion\\IntroConsole\\IntroConsole.csproj": {}
+    "C:\\Users\\Darkm\\Desktop\\ProyectosS2024\\US-IT-Capacitacion\\WebApi\\BankAPI\\BankAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Darkm\\Desktop\\ProyectosS2024\\US-IT-Capacitacion\\IntroConsole\\IntroConsole.csproj": {
+    "C:\\Users\\Darkm\\Desktop\\ProyectosS2024\\US-IT-Capacitacion\\WebApi\\BankAPI\\BankAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Darkm\\Desktop\\ProyectosS2024\\US-IT-Capacitacion\\IntroConsole\\IntroConsole.csproj",
-        "projectName": "IntroConsole",
-        "projectPath": "C:\\Users\\Darkm\\Desktop\\ProyectosS2024\\US-IT-Capacitacion\\IntroConsole\\IntroConsole.csproj",
+        "projectUniqueName": "C:\\Users\\Darkm\\Desktop\\ProyectosS2024\\US-IT-Capacitacion\\WebApi\\BankAPI\\BankAPI.csproj",
+        "projectName": "BankAPI",
+        "projectPath": "C:\\Users\\Darkm\\Desktop\\ProyectosS2024\\US-IT-Capacitacion\\WebApi\\BankAPI\\BankAPI.csproj",
         "packagesPath": "C:\\Users\\Darkm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Darkm\\Desktop\\ProyectosS2024\\US-IT-Capacitacion\\IntroConsole\\obj\\",
+        "outputPath": "C:\\Users\\Darkm\\Desktop\\ProyectosS2024\\US-IT-Capacitacion\\WebApi\\BankAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Darkm\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,26 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.*, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.*, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -51,6 +71,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
