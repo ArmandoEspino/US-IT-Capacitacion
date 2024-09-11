@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using BankAPI.Data;
+using BankAPI.Services;
 using BankAPI.Data.BankModels;
 
 namespace BankAPI.Controllers;
@@ -9,73 +9,80 @@ namespace BankAPI.Controllers;
 public class ClientController : ControllerBase
 {
 
-    private readonly BankContext _context;
+    private readonly ClientService _service;
     
-    public ClientController(BankContext context)
+    public ClientController(ClientService client)
     {   
-        _context = context;
+        _service = client;
     }
 
     [HttpGet]
-    public IEnumerable<Client> Get()
+    public async Task<IEnumerable<Client>> Get()
     {
-        return _context.Clients.ToList();
+        return await _service.GetAll();
     }
 
 
     [HttpGet("{id}")]
-    public ActionResult<Client> GetbyId(int id)
+    public async Task<ActionResult<Client>> GetbyId(int id)
     {
-        var client = _context.Clients.Find(id);
+        var client =  await _service.GetById(id);
 
         if(client is null)
-            return NotFound();
+            return ClientNotFound(id);
 
         return client;
     }
 
 
     [HttpPost]
-    public IActionResult Create(Client client){
-        _context.Clients.Add(client);
-        _context.SaveChanges();
+    public async Task<IActionResult> Create(Client client){
+        
+        var newClient = await _service.Create(client);
 
-        return CreatedAtAction(nameof(GetbyId), new { id = client.Id } ,client);
+        return CreatedAtAction(nameof(GetbyId), new { id = newClient.Id } ,newClient);
     }
 
 
     [HttpPut("{id}")]
-    public IActionResult Update( int id, Client client){
+    public async Task<IActionResult> Update( int id, Client client){
 
         if(id != client.Id)
             return BadRequest();
 
-        var existingClient = _context.Clients.Find(id);
+        var clientToUpdate = await _service.GetById(id);
 
-        if(existingClient is null)
-            return NotFound();
-
-        existingClient.Name = client.Name;
-        existingClient.Email = client.Email;
-        existingClient.PhoneNumber = client.PhoneNumber;
-
-        _context.SaveChanges();
-
-        return NoContent();
+        if(clientToUpdate is not null)
+        {
+            await _service.Update(id, client);
+            return NoContent();
+        }
+        else
+        {
+            return ClientNotFound(id);
+        }
     }
 
 
     [HttpDelete("{id}")]
-    public IActionResult Delete( int id )
+    public async Task<IActionResult> Delete( int id )
     {
-        var existingClient = _context.Clients.Find(id);
-        if(existingClient is null)
-            return NotFound();
-        
-        _context.Clients.Remove(existingClient);
-        _context.SaveChanges();
+        var clientToDelete = await _service.GetById(id);
 
-        return Ok();
+        if(clientToDelete is not null)
+        {
+            await _service.Delete(id);
+            return Ok();
+        }
+        else
+        {
+            return ClientNotFound(id);
+        }
+    }
+
+    public NotFoundObjectResult ClientNotFound(int id)
+    {
+        return NotFound( new {message = $"El cliente con ID = {id} no existe"});
     }
 
 }

@@ -1,4 +1,6 @@
 using BankAPI.Data;
+using BankAPI.Data.BankModels;
+using BankAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +12,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddSqlServer<BankContext>(builder.Configuration.GetConnectionString("BankConnection"));
+
+builder.Services.AddScoped<ClientService>();
+builder.Services.AddScoped<AccountService>();
+builder.Services.AddScoped<AccountTypeService>();
 
 var app = builder.Build();
 
