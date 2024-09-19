@@ -1,11 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
 using BankAPI.Services;
 using BankAPI.Data.BankModels;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BankAPI.Controllers;
 
+[Authorize]
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class ClientController : ControllerBase
 {
 
@@ -16,7 +18,7 @@ public class ClientController : ControllerBase
         _service = client;
     }
 
-    [HttpGet]
+    [HttpGet("getall")]
     public async Task<IEnumerable<Client>> Get()
     {
         return await _service.GetAll();
