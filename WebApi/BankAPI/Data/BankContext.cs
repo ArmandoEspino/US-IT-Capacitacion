@@ -28,7 +28,6 @@ public partial class BankContext : DbContext
 
     public virtual DbSet<TransactionType> TransactionTypes { get; set; }
 
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Account>(entity =>
@@ -139,6 +138,9 @@ public partial class BankContext : DbContext
                 .IsUnicode(false);
             entity.Property(e => e.PhoneNumber)
                 .HasMaxLength(40)
+                .IsUnicode(false);
+            entity.Property(e => e.Pwd)
+                .HasMaxLength(300)
                 .IsUnicode(false);
             entity.Property(e => e.RegDate)
                 .HasDefaultValueSql("(getdate())")
